@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import fetch from 'superagent'
+import React, { Component } from 'react';
+import fetch from 'superagent';
 
 export default class Fetchpage extends Component {
 
@@ -25,7 +25,7 @@ export default class Fetchpage extends Component {
     }
 
     fetchBirthLocation = async () => {
-        const response = await fetch.get(``)
+        const response = await fetch.get(`https://git.heroku.com/alchemy-back.git/authors/${this.state.author}`)
 
         this.setState({ born: response.body })
     }
