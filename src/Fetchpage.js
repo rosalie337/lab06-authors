@@ -5,7 +5,7 @@ export default class Fetchpage extends Component {
 
     state = {
         author: [],
-        born: 'seattle, WA'
+        born: []
 
     }
 
@@ -24,12 +24,13 @@ export default class Fetchpage extends Component {
 
     }
 
-    fetchBirthLocation = async () => {
-        const response = await fetch.get(`https://git.heroku.com/alchemy-back.git/authors/${this.state.author}`)
+    fetchLocation = async () => {
+        const response = await fetch.get(`https://serene-falls-22234.herokuapp.com/authors`)
 
-        this.setState({ born: response.body })
+        await this.setState({ born: response.body })
     }
     render() {
+        console.log(this.state.born);
         return (
             <div class="fetch">
             <form onSubmit={this.handleSubmit}>
