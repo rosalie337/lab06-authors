@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import fetch from 'superagent';
 
-export default class Fetchpage extends Component {
+export default class FetchPage extends Component {
 
     state = {
         author: [],

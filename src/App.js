@@ -21,22 +21,18 @@ export default class App extends Component {
                             render={(routerProps) => <ListPage {...routerProps} />} 
                         />
                         <Route 
-                            path="/" 
+                            path="/detail/:id" 
                             exact
                             render={(routerProps) => <DetailPage {...routerProps} />} 
+                        />
+                        <Route 
+                            path="/create" 
+                            exact
+                            render={(routerProps) => <CreatePage {...routerProps} />} 
                         />
                     </Switch>
                 </Router>
             </div>
         )
     }
-}
-function App() {
-  return (
-    <div className="App">
-      <Fetchpage />  
-    </div>
-  );
-}
-
-export default App;
+};
