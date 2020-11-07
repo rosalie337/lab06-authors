@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = process.env.REACT_APP_API_URL || 'https://serene-falls-22234.herokuapp.com/authors'; 
+const URL = process.env.REACT_APP_API_URL || 'https://serene-falls-22234.herokuapp.com/'; 
 
 export async function fetchAuthors() {
     try {
@@ -25,7 +25,7 @@ export async function fetchAuthor(someId) {
 
 export async function fetchOrigins() {
     try {
-        const response = await request.get(`${URL}author_origins/${someId}`);
+        const response = await request.get(`${URL}authors_origin`);
         
         return response.body;
     }  catch(err) {

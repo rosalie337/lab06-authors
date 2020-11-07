@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class ListPage extends Component {
+export default class CreatePage extends Component {
     render() {
         return (
             <div>
-                list page
+                create page
             </div>
         )
     }

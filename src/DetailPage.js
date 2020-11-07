@@ -3,7 +3,7 @@ import {
     fetchOrigins,
     fetchAuthor,
     updateAuthor,
-} from 'Fetch.js';
+} from './Fetch.js';
 
 const userFromLocalStorage = {
     userId: 1
@@ -28,12 +28,10 @@ export default class DetailPage extends Component {
 
         const originAsAString = author.born;
         
-        // Double check this 
         const matchingOrigin = origins.find((born) => {
-            return born.location === originAsAString
+            return born.born === originAsAString
         });
 
-        // Double check this
         this.setState({
             origins: origins,
             born_id: matchingOrigin.id,

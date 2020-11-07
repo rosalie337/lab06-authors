@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'superagent';
+import { Link } from 'react-router-dom';
 
 export default class FetchPage extends Component {
 
@@ -40,12 +41,16 @@ export default class FetchPage extends Component {
                 {
                 this.state.born.length === 0
                 ? 'LOADING!!'
-                : this.state.born.map( born => <div key={born.born}>
-                    <p>{born.author}</p>
-                    <p>{born.born}</p>
+                : this.state.born.map( born => <div key={born.id}>
+                    <Link to={`/detail/${born.id}`}>
+                        <p>{born.author_name}</p>
+                        <p>{born.published_books}</p>
+                        <p>{born.living}</p>
+                        <p>{born.born}</p>
+                    </Link>
                     </div>)
+                    
                 }
-                
             </div>
         )
     }

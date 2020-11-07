@@ -5,8 +5,9 @@ import {
     Route, 
     Switch,
 } from 'react-router-dom';
-import ListPage from './ListPage.js';
+import FetchPage from './Fetchpage.js';
 import DetailPage from './DetailPage.js';
+import CreatePage from './CreatePage.js';
 
 export default class App extends Component {
     render() {
@@ -17,7 +18,7 @@ export default class App extends Component {
                         <Route 
                             path="/" 
                             exact
-                            render={(routerProps) => <ListPage {...routerProps} />} 
+                            render={(routerProps) => <FetchPage {...routerProps} />} 
                         />
                         <Route 
                             path="/detail/:id" 
