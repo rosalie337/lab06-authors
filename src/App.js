@@ -1,5 +1,4 @@
 import './App.css';
-import Fetchpage from './Fetchpage';
 import React, { Component } from 'react'
 import {
     BrowserRouter as Router, 

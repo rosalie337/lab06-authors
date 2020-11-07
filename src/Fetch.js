@@ -15,10 +15,20 @@ export async function fetchAuthors() {
 
 export async function fetchAuthor(someId) {
     try {
-        const response = await request.get(`${URL}origins`); // this naming convention might cause issues
+        const response = await request.get(`${URL}authors/${someId}`); // this naming convention might cause issues
 
         return response.body;
     } catch(err) {
+        throw err;
+    }
+}
+
+export async function fetchOrigins() {
+    try {
+        const response = await request.get(`${URL}author_origins/${someId}`);
+        
+        return response.body;
+    }  catch(err) {
         throw err;
     }
 }
