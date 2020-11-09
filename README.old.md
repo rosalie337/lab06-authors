@@ -14,8 +14,8 @@
 
 Goal | Points (10)
 :--|--:
-[ ] Working React-Router in App.js, and Home/List links to Detail/Update page for each item | 2
-[ ] Update/Detail page for a single item, with the item's ID in the URL and fetch on load, with form values (excluding dropdown) pre-loaded. | 2
+[x] Working React-Router in App.js, and Home/List links to Detail/Update page for each item | 2
+[x] Update/Detail page for a single item, with the item's ID in the URL and fetch on load, with form values (excluding dropdown) pre-loaded. | 2
 [ ] Delete button on detail/update page for a single item, and route to list on delete | 2
 [ ] Functioning form and edit button on detail page for a single item (so the user can update an item) | 2
 [ ] Api funtions should be in their own file for components to import | 2 
